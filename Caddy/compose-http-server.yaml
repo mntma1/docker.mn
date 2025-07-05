@@ -1,0 +1,11 @@
+name: http-server
+services:
+    simple-http-server:
+        image: jdkelley/simple-http-server:latest
+        volumes:
+            - ./file:/serve
+        networks:
+            - caddy_net
+networks:
+  caddy_net:
+     external: true
