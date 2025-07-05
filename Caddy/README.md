@@ -1,0 +1,47 @@
+## Docker Container erstellen
+
+**Diese Befehle als root ausfüren:**
+
+```
+git clone https://github.com:mntma1/docker.mn.git
+cd docker.mn
+
+mkdir -pv /data/caddy/site
+mkdir -pv /data/caddy/data
+chown -Rv $USER: /data/
+
+sudo cp -av Cadddy /opt
+sudo chown -Rv $USER: /opt/Caddy
+```
+<br>
+
+**Diese Befehle als Benutzer ausführen:**
+
+```
+cd /opt/caddy
+docker network create caddy_net
+docker compose -f compose.yaml
+docker compose -f compose-http-server.yaml
+```
+
+## Öffendliche Links der Webseiten einrichten
+**Datei:** /opt/caddy/Caddyfile **bearbeiten** 
+
+```
+#[Subdomain].[deine-domaim.de]
+
+omv.meine.domain.de {
+    reverse_proxy 192.168.x.x:81
+}
+
+jellyfin.meine.domain.de {
+    reverse_proxy 192.168.x.x:8096
+}
+apachegua.meine.domain.de {
+    reverse_proxy 192.168.x.x:8081
+}
+
+immich.meine.domain.de {
+    reverse_proxy 192.168.17.182:2283
+}
+```
