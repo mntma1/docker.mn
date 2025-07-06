@@ -1,7 +1,6 @@
 ## Caddy Docker Container erstellen
 Siehe: [Caddy Dokumentation](https://caddyserver.com/)
 
-**Diese Befehle als root ausfüren:**
 
 ```
 git clone https://github.com:mntma1/docker.mn.git
@@ -15,9 +14,10 @@ sudo chown -Rv $USER: /opt/Caddy
 ```
 <br>
 
-**Diese Befehle als Benutzer ausführen:**
+**Diese Befehle als Benutzer ausführen**
 
 ```
+sudo -aG docker $USER 
 cd /opt/Caddy
 docker network create caddy_net
 docker compose -f compose.yaml
@@ -42,6 +42,6 @@ apachegua.meine.domain.de {
 }
 
 immich.meine.domain.de {
-    reverse_proxy 192.168.17.182:2283
+    reverse_proxy 192.168.x.x:2283
 }
 ```
