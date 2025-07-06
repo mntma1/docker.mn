@@ -1,4 +1,5 @@
-## Docker Container erstellen
+## Caddy Docker Container erstellen
+Siehe: [Caddy Dokumentation](https://caddyserver.com/)
 
 **Diese Befehle als root ausfüren:**
 
@@ -6,9 +7,8 @@
 git clone https://github.com:mntma1/docker.mn.git
 cd docker.mn
 
-mkdir -pv /data/caddy/site
-mkdir -pv /data/caddy/data
-chown -Rv $USER: /data/
+sudo mkdir -pv /data/caddy/{data,site,config}
+sudo chown -Rv $USER: /data/
 
 sudo cp -av Cadddy /opt
 sudo chown -Rv $USER: /opt/Caddy
@@ -18,7 +18,7 @@ sudo chown -Rv $USER: /opt/Caddy
 **Diese Befehle als Benutzer ausführen:**
 
 ```
-cd /opt/caddy
+cd /opt/Caddy
 docker network create caddy_net
 docker compose -f compose.yaml
 docker compose -f compose-http-server.yaml
