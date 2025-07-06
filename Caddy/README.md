@@ -1,23 +1,33 @@
 ## Caddy Docker Container erstellen
 Siehe: [Caddy Dokumentation](https://caddyserver.com/)
 
+### root werden
+```
+su -
+usermod -aG docker $USER 
+[Strg+d] #Ist wie exit oder logout
 
 ```
-git clone https://github.com:mntma1/docker.mn.git
-cd docker.mn
 
-sudo mkdir -pv /data/caddy/{data,site,config}
-sudo chown -Rv $USER: /data/
+> [!NOTE]
+> $USER ist der angemeldete Benutzer
 
-sudo cp -av Cadddy /opt
-sudo chown -Rv $USER: /opt/Caddy
-```
-<br>
+
+### Neu anmelden oder eine neue Shell öffnen
 
 **Diese Befehle als Benutzer ausführen**
 
 ```
-sudo -aG docker $USER 
+
+sudo mkdir -pv /data/caddy/{data,site,config}
+sudo chown -Rv $USER: /data/
+
+git clone https://github.com:mntma1/docker.mn.git
+
+cd docker.mn
+sudo cp -av Cadddy /opt
+sudo chown -Rv $USER: /opt/Caddy
+
 cd /opt/Caddy
 docker network create caddy_net
 docker compose -f compose.yaml
