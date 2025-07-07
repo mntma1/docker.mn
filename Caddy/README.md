@@ -15,9 +15,6 @@ usermod -aG docker $USER
 > [!NOTE]
 > $USER ist der angemeldete Benutzer
 
-::: info
-Das hier ist auch eine Info
-:::
 ### Neu anmelden oder eine neue Shell öffnen
 
 **Diese Befehle als Benutzer ausführen**
