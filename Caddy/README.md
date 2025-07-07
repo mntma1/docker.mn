@@ -1,6 +1,9 @@
 ## Caddy Docker Container erstellen
 Siehe: [Caddy Dokumentation](https://caddyserver.com/)
 
+> [!TIP]
+> Mach dir erstmal eien Kafffee, dies hier kann nemlich dauern
+
 ### root werden
 ```
 su -
