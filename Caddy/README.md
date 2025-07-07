@@ -2,14 +2,16 @@
 Siehe: [Caddy Dokumentation](https://caddyserver.com/)
 
 > [!TIP]
-> Mach dir erstmal eien Kaffee, dies hier kann nemlich etwas dauern.
+> Mach dir erstmal einen Kaffee, dies hier kann nemlich etwas dauern.
 
-### root werden
+> [!NOTE]
+> Werde root und logge dich danach mit [Strg+D] wieder aus.
+> [Strg+D] ist wie exit.
+
 ```
 su -
 usermod -aG docker $USER 
-[Strg+d] #Ist wie exit oder logout
-
+[Strg+D]
 ```
 
 > [!NOTE]
