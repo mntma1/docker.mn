@@ -2,7 +2,7 @@
 Siehe: [Caddy Dokumentation](https://caddyserver.com/)
 
 > [!TIP]
-> Mach dir erstmal eien Kafffee, dies hier kann nemlich dauern
+> Mach dir erstmal eien Kaffee, dies hier kann nemlich etwas dauern.
 
 ### root werden
 ```
