@@ -1,6 +1,7 @@
 ## Install Nextcloud-AIO with no Trafik
  
 #!/usr/bin/bash
+
 docker volume create nextcloud_aio_nextcloud_data
 
 docker run \
