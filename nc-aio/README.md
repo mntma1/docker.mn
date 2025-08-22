@@ -22,7 +22,7 @@ ghcr.io/nextcloud-releases/all-in-one:latest
 exit 0
 ```
 
-**Now goto:** [Setup Nextcloud AIO](https://192.168.1.17)
+**Now goto:** [Setup Nextcloud AIO](https://192.168.17.55:8080)
 
 
 <img width="2736" height="1824" alt="368996209-6ef5d7b5-86f2-402c-bc6_73f5a8854cc84c80b" src="https://github.com/user-attachments/assets/a53dc12c-a0df-4444-9b1f-2b00b592cbb9" />
