@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+sudo mkdir /ncdata
 docker volume create nextcloud_aio_nextcloud_data
 docker run \
 --init \
