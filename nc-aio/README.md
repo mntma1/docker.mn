@@ -3,7 +3,7 @@
 ### File: install_nc-aio.sh
 ```
 #!/usr/bin/bash
-mkdir /ncdata # Or an mountpoint to an external data carrier
+sudo mkdir /ncdata # Or an mountpoint to an external data carrier
 docker volume create nextcloud_aio_nextcloud_data
 docker run \
 --init \
