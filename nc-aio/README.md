@@ -1,5 +1,6 @@
 ## Install Nextcloud-AIO with no Trafik
- 
+
+### File: install_nc-aio.sh
 ```
 #!/usr/bin/bash
 mkdir /ncdata # Or an mountpoint to an external data carrier
