@@ -2,8 +2,11 @@
  
 #!/usr/bin/bash
 
+mkdir /ncdata # Or an mountpoint to an external data carrier
+
 docker volume create nextcloud_aio_nextcloud_data
 
+''''
 docker run \
 --init \
 --sig-proxy=false \
@@ -19,3 +22,4 @@ docker run \
 --volume /var/run/docker.sock:/var/run/docker.sock:ro \
 ghcr.io/nextcloud-releases/all-in-one:latest
 exit 0
+''''
