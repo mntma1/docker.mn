@@ -13,7 +13,7 @@ sudo mkdir -pv /opt/caddy/{caddy_data,caddy_config}
 sudo chown -Rv $USER: /opt/caddy
 ```
 
-2. vim /opt/Caddy/docker-compose.yaml
+2. nano /opt/Caddy/docker-compose.yaml
 ```yaml
 services:
   caddy:
