@@ -1,3 +1,8 @@
+# eMail für Let's encrypt
+{
+    email manfred.nitsche@open-jazz.de
+}
+
 omv.meine.domain.de {
     reverse_proxy 192.168.17.105:81
 }
@@ -5,6 +10,7 @@ omv.meine.domain.de {
 jellyfin.meine.domain.de {
     reverse_proxy 192.168.17.105:8096
 }
+
 apachegua.meine.domain.de {
     reverse_proxy 192.168.17.105:8081
 }
