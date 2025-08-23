@@ -9,11 +9,8 @@
 # Craeated by: Manfred
 # Date: 23.08.2025
 
-sudo mkdir -pv /data/caddy_data
-sudo chown -Rv manfred: /data/
-
-sudo mkdir -pv /opt/Caddy/caddy_config
-sudo chown -Rv /opt/
+sudo mkdir -pv /opt/caddy/{caddy_data,caddy_config}
+sudo chown -Rv $USER: /opt/caddy
 ```
 
 2. vim /opt/Caddy/docker-compose.yaml
@@ -41,9 +38,28 @@ volumes:
   caddy_data:
   caddy_config:
 ```
-
-3. vim /opt/Caddy/Caaddyile
+3. mano  /opt/caddy/compose-http-server.yaml
 ```yaml
+name: simple-http-server
+services:
+    simple-http-server:
+        image: jdkelley/simple-http-server:latest
+        volumes:
+            - ./file:/serve
+        networks:
+            - caddy_net
+networks:
+  caddy_net:
+     external: tru
+```
+
+4. vim /opt/caddy/Caaddyile
+```yaml
+# eMail für Let's encrypt
+{
+   email manfred.nitsche@open-jazz.de
+}
+
 omv.tma1.duckdns.org {
     reverse_proxy 192.168.17.105:81
 }
@@ -51,13 +67,11 @@ omv.tma1.duckdns.org {
 jellyfin.tma1.duckdns.org {
     reverse_proxy 192.168.17.105:8096
 }
+
 apachegua.tma1.duckdns.org {
     reverse_proxy 192.168.17.105:8081
 }
 
-#cloud.tma1.duckdns.org {
-#    reverse_proxy 192.168.17.127:443
-#}
 ```
 
 4. Run Caddy docker  
