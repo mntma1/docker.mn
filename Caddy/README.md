@@ -68,21 +68,26 @@ networks:
 ```
 # E-Mail-Adresse für Let's encrypt
 {
-    email manfred.nitsche@open-jazz.de
+    email Name@mailDomain.de
 }
 
-omv.tma1.duckdns.org {
-    reverse_proxy 192.168.17.105:81
+[sub].[domain].[TLD: ,de .org .net. .ipv64.de  ]
+subeDomain.ipv64.de {
+    reverse_proxy 192.168.xxx.xxx:port
 }
 
-jellyfin.tma1.duckdns.org {
-    reverse_proxy 192.168.17.105:8096
+sub.deineDomain.net {
+    reverse_proxy 10.1.xxx.xxx:port
 }
 
-apachegua.tma1.duckdns.org {
-    reverse_proxy 192.168.17.105:8081
+sub.deineDomain.org {
+    reverse_proxy 172.16.xxxxxx:port
 }
 ```
+
+> [!TIP]
+> Als DynDNS Anbieter ist ipv64.net sehr zu empfehelen.
+> Oder auch duckdns,org, dort hat man eine kostenlose *.Domain
 
 5. Run Caddy docker
 ```
